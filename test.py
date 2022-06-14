@@ -5,7 +5,7 @@ dataframe = pd.read_csv('player_stats_dataset.csv')
 # Set page config
 st.set_page_config(page_title='Soccer Players Stats', page_icon=':soccer:', initial_sidebar_state='expanded')
 
-games_list = list(dataframe['player'])
+games_list = list(set(dataframe['player']))
 
 # Drop-down menu "Select Football Game"
 st.sidebar.markdown('## Select Player ')
