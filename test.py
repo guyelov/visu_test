@@ -10,7 +10,6 @@ players = pd.read_csv('players_details.csv')
 # Drop-down menu "Select Football Game"
 st.sidebar.markdown('## Select Player ')
 menu_game = st.sidebar.selectbox('Select a player at your choice', games_list, index=14)
-st.sidebar.markdown("""Here you can select one of 15 football games from the UEFA Euro 2020 knockout stage: """)
 
 selected_player =players. loc[players['Name'] == menu_game]
 st.write(f'my name is {menu_game} i born in {selected_player["Nationality"].iloc[0]} in {selected_player["Birth_Date"].iloc[0]}  ')
