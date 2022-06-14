@@ -17,4 +17,6 @@ st.sidebar.markdown("""
                     * two semi-finals
                     * one final
                     """)
+st.write(f'my name is {menu_game} i born in England :england:  ')
+
 st.dataframe(dataframe.loc[dataframe['player'] == menu_game])
