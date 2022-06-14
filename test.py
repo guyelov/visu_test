@@ -9,7 +9,7 @@ games_list = list(dataframe['player'])
 
 # Drop-down menu "Select Football Game"
 st.sidebar.markdown('## Select Player ')
-menu_game = st.sidebar.selectbox('Select Game', games_list, index=14)
+menu_game = st.sidebar.selectbox('Select a player at your choice', games_list, index=14)
 st.sidebar.markdown("""Here you can select one of 15 football games from the UEFA Euro 2020 knockout stage: """)
 st.sidebar.markdown(""" 
                     * eight games in the round of 16
@@ -17,4 +17,4 @@ st.sidebar.markdown("""
                     * two semi-finals
                     * one final
                     """)
-st.dataframe(dataframe)
+st.dataframe(dataframe.loc[dataframe['player'] == menu_game])
