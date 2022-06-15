@@ -1,6 +1,8 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+import flagz
+
 
 dataframe = pd.read_csv('player_stats_dataset.csv')
 # Set page config
@@ -10,6 +12,7 @@ games_list = sorted(list(set(dataframe['player'])))
 players = pd.read_csv('players_details.csv')
 # Drop-down menu "Select Football Game"
 st.sidebar.markdown('## Select Player ')
+st.sidebar.markdown(flagz.by_code('il'))
 menu_game = st.sidebar.selectbox('Select a player at your choice', games_list, index=14)
 
 selected_player =players. loc[players['Name'] == menu_game]
